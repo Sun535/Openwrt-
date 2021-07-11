@@ -16,9 +16,8 @@
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
-sed -i '$a src-git diy1 https://github.com/xiaorouji/openwrt-passwall.git;main' feeds.conf.default
+# helloword
+sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 
-#git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/lean/luci-app-smartdns
-
-git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
-git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
+# passwall
+#sed -i '$a src-git diy1 https://github.com/xiaorouji/openwrt-passwall.git;main' feeds.conf.default
