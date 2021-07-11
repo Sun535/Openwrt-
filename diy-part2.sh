@@ -18,7 +18,7 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 # 主机名
 sed -i 's/OpenWrt/Sun/g' package/base-files/files/bin/config_generate
 # 时区
-sed -i 's/UTC/Asia/Shanghai/g' package/base-files/files/bin/config_generate
+#sed -i 's/UTC/Asia/Shanghai/g' package/base-files/files/bin/config_generate
 
 [ -e package ] && mkdir package/d -p && cd package/d
 git clone https://github.com/garypang13/openwrt-packages.git
