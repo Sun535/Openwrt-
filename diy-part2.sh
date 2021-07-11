@@ -21,15 +21,8 @@ sed -i 's/OpenWrt/Sun/g' package/base-files/files/bin/config_generate
 #sed -i 's/UTC/Asia/Shanghai/g' package/base-files/files/bin/config_generate
 
 [ -e package ] && mkdir package/d -p && cd package/d
-git clone https://github.com/garypang13/openwrt-packages.git
-mv openwrt-packages/lua-maxminddb lua-maxminddb
-mv openwrt-packages/smartdns-le smartdns-le
-mv openwrt-packages/luci-app-bypass luci-app-bypass
-mv openwrt-packages/luci-app-dnsfilter luci-app-dnsfilter
-rm -rf openwrt-packages
+git clone https://github.com/small-5/luci-app-adblock-plus.git
 cd ../../
-find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-redir/shadowsocksr-libev-alt/g' {}
-find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-server/shadowsocksr-libev-server/g' {}
 
 
 
